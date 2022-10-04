@@ -1,2 +1,2 @@
-import { post } from './Api/BaseApi';
-export { post };
+import { post, getAxios } from './Api/BaseApi';
+export { post, getAxios };
