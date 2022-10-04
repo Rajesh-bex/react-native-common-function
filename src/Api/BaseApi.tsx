@@ -25,6 +25,7 @@ const handleError = async (error: any) => {
 };
 
 const getAxios = async (url: string, header?: object) => {
+  console.log(url, header);
   try {
     const response: any = await axios.get(url, header);
     if (response) {
