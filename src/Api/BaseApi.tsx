@@ -24,4 +24,19 @@ const handleError = async (error: any) => {
   }
 };
 
-export { post };
+const getAxios = async (url: string, header?: object) => {
+  try {
+    const response: any = await axios.get(url, header);
+    if (response) {
+      if (response.bodyString) {
+        return JSON.parse(response.bodyString).data;
+      }
+      return response;
+    }
+  } catch (error: any) {
+    handleError(error);
+    //errorHandler(error, url);
+  }
+};
+
+export { post, getAxios };
