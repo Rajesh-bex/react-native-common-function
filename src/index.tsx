@@ -1,2 +1,3 @@
 import { post, getAxios } from './Api/BaseApi';
-export { post, getAxios };
+import { CommonTestReducer } from './Redux/CommonReducer';
+export { post, getAxios, CommonTestReducer };
